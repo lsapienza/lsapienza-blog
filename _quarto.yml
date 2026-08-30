@@ -2,20 +2,16 @@ project:
   type: website
 
 website:
-  title: "leonardo.sapienza"
+  title: "Meu Blog"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: Início
+      - href: about.qmd
+        text: Sobre
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
     toc: true
-
-editor: visual
-
