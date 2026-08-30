@@ -1,9 +1,0 @@
----
-title: "Meu Blog"
----
-
-# Bem-vindo!
-
-Olá! Este é o meu blog.
-
-Aqui vou publicar meus textos, análises e projetos.
