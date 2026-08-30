@@ -9,6 +9,12 @@ website:
         text: Início
       - href: about.qmd
         text: Sobre
+page-footer:
+    right:
+      - icon: envelope
+        href: mailto:raphaludwig@gmail.com
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/raphael-ludwig-167347414"
 
 format:
   html:
