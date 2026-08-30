@@ -1,0 +1,16 @@
+---
+title: "Sobre"
+---
+
+# Sobre mim
+
+Olá! Este é o meu espaço para compartilhar meus estudos,
+projetos e análises.
+
+## O que você encontrará aqui
+
+- Análises
+- Projetos
+- Estudos
+- Gráficos
+- Textos
