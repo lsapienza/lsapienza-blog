@@ -1,0 +1,33 @@
+---
+title: "Blog"
+page-layout: full
+include-before-body: ../assets/html/particles-embed.html
+include-after-body: ../assets/html/particles-scripts.html
+listing:
+  # Only English posts, plus Portuguese ones with no English version yet — see
+  # `en-version` in ../CONTEXT.md.
+  #
+  # This page has a Portuguese twin (index-pt.qmd) rather than two when-profile
+  # blocks like ../index.qmd, because two listings on one page share a single
+  # category filter widget whose counts then aggregate across both — the hidden
+  # listing's posts get counted. One listing per page is the only way to keep the
+  # category counts honest. Each profile's `render:` list excludes the other file.
+  id: blog-listing
+  contents: "[0-9]*.qmd"
+  exclude:
+    en-version: true
+  type: grid
+  categories: true
+  sort: "date desc"
+  fields: [title, description, categories, date]
+toc: false
+---
+
+::: {.page-intro}
+A growing collection of quantitative economics exercises. Replications and extensions
+of public empirical work from central banks, academic papers, and primary research,
+built on public data.
+:::
+
+:::{#blog-listing}
+:::

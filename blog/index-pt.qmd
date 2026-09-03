@@ -1,0 +1,33 @@
+---
+title: "Blog"
+page-layout: full
+include-before-body: ../assets/html/particles-embed.html
+include-after-body: ../assets/html/particles-scripts.html
+listing:
+  # Portuguese twin of index.qmd — see the note there for why this is a separate
+  # file instead of two when-profile blocks.
+  #
+  # Deliberately no `output-file: index.html`: that makes two sources target the
+  # same output, which `quarto render` tolerates (it honours the `!` exclusion in
+  # each profile's render list) but `quarto preview` does not — preview ignores the
+  # exclusion, renders both, and dies on the rename collision. build.ps1 renames
+  # this to blog/index.html inside the pt tree instead.
+  id: blog-listing
+  contents: "[0-9]*.qmd"
+  exclude:
+    pt-version: true
+  type: grid
+  categories: true
+  sort: "date desc"
+  fields: [title, description, categories, date]
+toc: false
+---
+
+::: {.page-intro}
+Uma coleção crescente de exercícios de economia quantitativa. Replicações e extensões
+de trabalhos empíricos públicos de bancos centrais, artigos acadêmicos e pesquisa
+primária, construídos sobre dados públicos.
+:::
+
+:::{#blog-listing}
+:::
