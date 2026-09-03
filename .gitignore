@@ -1,0 +1,11 @@
+/.quarto/
+/_site/
+/_site-en/
+/_site-pt/
+blog/*_cache/
+blog/*_files/
+**/*.quarto_ipynb
+.DS_Store
+quick_guide.md
+blog/CLAUDE.md
+blog/notes/*/nota.md
