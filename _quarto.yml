@@ -1,8 +1,37 @@
+# Base config - shared by both language profiles.
+#
+# IMPORTANT: Quarto profile merging CONCATENATES arrays, it does not replace them.
+# So anything that is a *list* and differs between languages (navbar.left/right,
+# page-footer.left/center) must live only in _quarto-en.yml / _quarto-pt.yml.
+# Lists that are identical in both languages stay here, declared once.
+#
+# Neither profile is the default: build.ps1 always renders with an explicit
+# --profile en / --profile pt.
+
 project:
   type: website
+  # Only .qmd - keeps CONTEXT.md, adr/ and blog/notes/ out of the published site.
+  # Each profile appends a "!" entry excluding the other language's blog index
+  # (profile arrays concatenate onto this one rather than replacing it).
+render:
+    - "*.qmd"
+    - "blog/*.qmd"
+  resources:
+    - .nojekyll
+    - cv/Raphael_Ludwig_CV.pdf
+    - cv/Raphael_Ludwig_CV_EN.pdf
+    # Sem estas exclusões o Quarto trata os diretórios de saída como recursos do
+    # projeto e copia um dentro do outro: cada build gera docs/_site/,
+    # docs/pt/_site/ e docs/pt/_site-en/_site/, e o build seguinte copia aquilo de
+    # novo. Cresce a cada rodada - já chegou a 8 GB uma vez.
+    - "!_site/"
+    - "!_site-en/"
+    - "!_site-pt/"
+    - "!docs/"
 
 website:
   title: "Meu Blog - Sapienza"
+  favicon: assets/img/monogram.svg
   navbar:
     left:
       - href: index.qmd
@@ -18,6 +47,13 @@ page-footer:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+    theme: [cosmo, assets/css/theme.scss]
+    css: assets/css/site.css
+    toc: false
+    grid:
+      body-width: 900px
+    link-external-newwindow: true
+    include-after-body: assets/html/lang-switch.html
+
+execute:
+  freeze: auto
