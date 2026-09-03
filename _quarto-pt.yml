@@ -1,0 +1,46 @@
+# Portuguese profile. Rendered by build.ps1 into _site-pt, which becomes docs/pt/.
+#
+# `lang: pt` is what makes Quarto translate the chrome it generates itself:
+# search placeholder and no-results strings, TOC title ("Nesta página"), and
+# date formatting. Everything below is the text Quarto does *not* own.
+
+lang: pt
+
+project:
+  render:
+    - "!blog/index.qmd"
+  output-dir: _site-pt
+
+website:
+  site-url: "https://raphaludwig.github.io/pt"
+  description: "Economista quantitativo — pesquisa macro, previsão e econometria aplicada."
+  navbar:
+    title: false
+    left:
+      - href: index.qmd
+        text: Início
+      # index-pt.qmd, not index.qmd: only the file rendered under this profile
+      # gets its .qmd -> .html link rewritten. build.ps1 then renames
+      # index-pt.html to index.html and fixes the references.
+      - href: blog/index-pt.qmd
+        text: Blog
+    right:
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/raphael-ludwig-167347414"
+        aria-label: LinkedIn
+        target: _blank
+      - icon: envelope
+        href: "mailto:raphaludwig@gmail.com"
+        aria-label: Email
+      # See the note in _quarto-en.yml. Without JS this lands on the EN home.
+      - text: "EN"
+        href: "../en/index.html"
+        rel: alternate
+        aria-label: "View in English"
+  page-footer:
+    left: "© 2026 Raphael Ludwig"
+    center: "Feito com [Quarto](https://quarto.org)"
+
+format:
+  html:
+    code-summary: "Mostrar código"

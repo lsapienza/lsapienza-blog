@@ -1,0 +1,48 @@
+# English profile. Rendered by build.ps1 into _site-en, which becomes docs/en/.
+#
+# The two versions are siblings — /en/ and /pt/ — with nothing but a dispatcher at
+# the root. That symmetry is what makes every in-tree link work with no JavaScript:
+# Quarto resolves "Home" relative to the page, so a visitor inside /en/ stays in
+# /en/ by construction.
+
+lang: en
+
+project:
+  render:
+    - "!blog/index-pt.qmd"
+  output-dir: _site-en
+
+website:
+  site-url: "https://raphaludwig.github.io/en"
+  description: "Quantitative economist — macro research, forecasting & applied econometrics."
+  navbar:
+    title: false
+    left:
+      - href: index.qmd
+        text: Home
+      - href: blog/index.qmd
+        text: Blog
+    right:
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/raphael-ludwig-167347414"
+        aria-label: LinkedIn
+        target: _blank
+      - icon: envelope
+        href: "mailto:raphaludwig@gmail.com"
+        aria-label: Email
+      # Language switch. Sits last in navbar.right, i.e. immediately left of the
+      # search glass (#quarto-search has order:999 and is always rightmost).
+      # rel="alternate" is both semantically correct and the hook lang-switch.js
+      # uses to find this link and rewrite its href to the current page's
+      # counterpart. Without JS it still works, landing on the PT home.
+      - text: "PT"
+        href: "../pt/index.html"
+        rel: alternate
+        aria-label: "Ver em português"
+  page-footer:
+    left: "© 2026 Raphael Ludwig"
+    center: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    code-summary: "Show code"
