@@ -1,0 +1,6 @@
+code-fold: true
+# code-summary lives in _quarto-en.yml / _quarto-pt.yml so it can be translated.
+# Setting it here would shadow the profile value for every post.
+toc: true
+freeze: auto
+include-after-body: ../assets/html/lightbox-embed.html
