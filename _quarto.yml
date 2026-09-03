@@ -13,9 +13,9 @@ project:
   # Only .qmd - keeps CONTEXT.md, adr/ and blog/notes/ out of the published site.
   # Each profile appends a "!" entry excluding the other language's blog index
   # (profile arrays concatenate onto this one rather than replacing it).
-render:
-    - "*.qmd"
-    - "blog/*.qmd"
+#render:
+ #   - "*.qmd"
+ #   - "blog/*.qmd"
   resources:
     - .nojekyll
     - cv/Raphael_Ludwig_CV.pdf
