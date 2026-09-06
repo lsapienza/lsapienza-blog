@@ -1,9 +1,0 @@
-/* Seleção de texto na cor da marca Análise Macro */
-::selection {
-  background: #18a0d7;
-  color: #ffffff;
-}
-::-moz-selection {
-  background: #18a0d7;
-  color: #ffffff;
-}
