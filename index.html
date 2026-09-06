@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Capital — portal financeiro moderno com notícias, mercado e investimentos.">
+  <title>LS Consultoria — Portal Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark">C</span>
+        <span>LS Consultoria</span>
+      </a>
+      <div class="topbar-info">
+        <span>Mercado aberto</span>
+        <span class="live-dot"></span>
+        <span>São Paulo · 13:44</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a class="active" href="#inicio">Mercados</a>
+        <a href="#acoes">Ações</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#analises">Análises</a>
+        <a href="#investimentos">Investimentos</a>
+        <a href="#sobre">Sobre</a>
+      </div>
+      <a class="search" href="#buscar" aria-label="Pesquisar">⌕</a>
+    </div>
+  </nav>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-copy">
+          <p class="kicker">VISÃO DE MERCADO</p>
+          <h1>O mercado em movimento.<br><em>Você no controle.</em></h1>
+          <p class="hero-subtitle">Informação financeira, dados e análises para entender o que está acontecendo — e por quê.</p>
+        </div>
+
+        <div class="ticker-grid" id="acoes">
+          <article class="ticker-card">
+            <div><span class="ticker-name">IBOVESPA</span><span class="ticker-value">+1,24%</span></div>
+            <strong>128.431 <small>pts</small></strong>
+            <div class="sparkline up" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="ticker-card">
+            <div><span class="ticker-name">DÓLAR</span><span class="ticker-value">−0,38%</span></div>
+            <strong>R$ 5,18</strong>
+            <div class="sparkline down" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="ticker-card">
+            <div><span class="ticker-name">NASDAQ</span><span class="ticker-value">+0,71%</span></div>
+            <strong>17.342 <small>pts</small></strong>
+            <div class="sparkline up" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="ticker-card">
+            <div><span class="ticker-name">BITCOIN</span><span class="ticker-value">+2,16%</span></div>
+            <strong>R$ 352.840</strong>
+            <div class="sparkline up" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard section">
+      <div class="container dashboard-grid">
+        <div class="chart-panel">
+          <div class="panel-header">
+            <div>
+              <p class="kicker">MERCADO BRASILEIRO</p>
+              <h2>Ibovespa</h2>
+            </div>
+            <div class="chart-price"><strong>128.431</strong><span>+1,24%</span></div>
+          </div>
+          <div class="chart-tabs"><button class="selected">1D</button><button>1S</button><button>1M</button><button>6M</button><button>1A</button></div>
+          <div class="chart" aria-label="Gráfico ilustrativo do Ibovespa">
+            <div class="gridline g1"></div><div class="gridline g2"></div><div class="gridline g3"></div><div class="gridline g4"></div>
+            <svg viewBox="0 0 900 260" preserveAspectRatio="none" role="img">
+              <defs>
+                <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0d8a66" stop-opacity=".28"/>
+                  <stop offset="1" stop-color="#0d8a66" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="area" d="M0,210 C65,195 70,205 125,170 S190,205 245,140 S310,155 365,120 S430,150 485,98 S545,125 600,88 S665,120 720,65 S790,90 900,35 L900,260 L0,260 Z"/>
+              <path class="line" d="M0,210 C65,195 70,205 125,170 S190,205 245,140 S310,155 365,120 S430,150 485,98 S545,125 600,88 S665,120 720,65 S790,90 900,35"/>
+            </svg>
+            <div class="chart-labels"><span>10:00</span><span>12:00</span><span>14:00</span><span>16:00</span><span>18:00</span></div>
+          </div>
+          <p class="disclaimer">Dados ilustrativos para demonstração do projeto.</p>
+        </div>
+
+        <aside class="market-list">
+          <div class="panel-header compact">
+            <div><p class="kicker">ATIVOS EM DESTAQUE</p><h2>Mais negociados</h2></div>
+            <a href="#">Ver todos →</a>
+          </div>
+          <div class="asset"><div><b>PETR4</b><small>Petrobras PN</small></div><strong>R$ 38,42 <span>+2,14%</span></strong></div>
+          <div class="asset"><div><b>VALE3</b><small>Vale ON</small></div><strong>R$ 61,88 <span>+1,37%</span></strong></div>
+          <div class="asset"><div><b>ITUB4</b><small>Itaú Unibanco PN</small></div><strong>R$ 34,15 <span>+0,82%</span></strong></div>
+          <div class="asset"><div><b>BBAS3</b><small>Banco do Brasil ON</small></div><strong>R$ 28,90 <span>−0,21%</span></strong></div>
+          <div class="asset"><div><b>WEGE3</b><small>WEG ON</small></div><strong>R$ 42,73 <span>+1,05%</span></strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="news section" id="noticias">
+      <div class="container">
+        <div class="section-title">
+          <div><p class="kicker">EM FOCO</p><h2>Notícias que importam</h2></div>
+          <a href="#">Todas as notícias →</a>
+        </div>
+
+        <div class="news-grid">
+          <article class="lead-news">
+            <div class="image-placeholder">
+              <span>MACROECONOMIA</span>
+              <div class="abstract-bars"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="news-content">
+              <p class="meta">ECONOMIA · 12 MIN</p>
+              <h3>Juros, inflação e atividade: o que observar no próximo ciclo econômico</h3>
+              <p>Os principais indicadores que podem mudar a percepção dos investidores nas próximas semanas.</p>
+              <a href="#">Ler análise →</a>
+            </div>
+          </article>
+
+          <div class="side-news">
+            <article class="news-item">
+              <span class="news-number">01</span>
+              <div><p class="meta">MERCADOS · 28 MIN</p><h3>Bolsa avança com melhora do apetite por risco</h3><a href="#">Ler mais →</a></div>
+            </article>
+            <article class="news-item">
+              <span class="news-number">02</span>
+              <div><p class="meta">EMPRESAS · 1 H</p><h3>Resultados corporativos voltam ao centro das atenções</h3><a href="#">Ler mais →</a></div>
+            </article>
+            <article class="news-item">
+              <span class="news-number">03</span>
+              <div><p class="meta">GLOBAL · 2 H</p><h3>Mercados internacionais acompanham novos dados dos EUA</h3><a href="#">Ler mais →</a></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="insights section" id="analises">
+      <div class="container insight-grid">
+        <div>
+          <p class="kicker">CAPITAL INSIGHTS</p>
+          <h2>Explicamos o que os números querem dizer.</h2>
+          <p class="insight-copy">Conteúdo editorial para transformar indicadores, decisões de política econômica e movimentos de mercado em informação útil.</p>
+          <a class="outline-button" href="Estudos/volatilidade-implicita-vale.html" class="btn">Explorar análises
+            
+</a>
+        </div>
+        <div class="quote-card">
+          <span class="quote-mark">“</span>
+          <p>O bom investidor não tenta prever todas as notícias. Ele entende os cenários, mede os riscos e toma decisões com método.</p>
+          <small>— Capital Editorial</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="investimentos">
+      <div class="container newsletter-inner">
+        <div><p class="kicker">NEWSLETTER CAPITAL</p><h2>Seu briefing antes do mercado.</h2><p>Uma leitura rápida dos principais acontecimentos da economia e dos mercados.</p></div>
+        <form><input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required><button type="submit">Assinar gratuitamente</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="sobre">
+    <div class="container footer-grid">
+      <div><a class="brand" href="#"><span class="brand-mark">C</span><span>CAPITAL</span></a><p>Economia, mercados e investimentos em perspectiva.</p></div>
+      <div><b>Explorar</b><a href="#noticias">Notícias</a><a href="#acoes">Mercados</a><a href="#analises">Análises</a></div>
+      <div><b>Projeto</b><a href="#">GitHub Pages</a><a href="#">Código-fonte</a><a href="#">Contato</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Capital. Projeto demonstrativo.</span><span>Valores e gráficos desta página são ilustrativos.</span></div>
+  </footer>
+
+  <script>
+    const menu = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+    menu.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      menu.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      links.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+</body>
+</html>
